@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AMBViewController : UIViewController
+@interface AMBViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

@@ -21,6 +21,9 @@
 		37629A5F18D533E600D2EF59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37629A4118D533E600D2EF59 /* UIKit.framework */; };
 		37629A6718D533E600D2EF59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37629A6518D533E600D2EF59 /* InfoPlist.strings */; };
 		37629A6918D533E600D2EF59 /* ChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37629A6818D533E600D2EF59 /* ChatTests.m */; };
+		37629A7318D548B000D2EF59 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37629A7218D548B000D2EF59 /* Parse.framework */; };
+		37629A7718D549C000D2EF59 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37629A7618D549C000D2EF59 /* SystemConfiguration.framework */; };
+		37629A7918D549E300D2EF59 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37629A7818D549E300D2EF59 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 		37629A6418D533E600D2EF59 /* ChatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChatTests-Info.plist"; sourceTree = "<group>"; };
 		37629A6618D533E600D2EF59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37629A6818D533E600D2EF59 /* ChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTests.m; sourceTree = "<group>"; };
+		37629A7218D548B000D2EF59 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		37629A7418D5496F00D2EF59 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		37629A7618D549C000D2EF59 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		37629A7818D549E300D2EF59 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +67,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37629A7918D549E300D2EF59 /* MobileCoreServices.framework in Frameworks */,
+				37629A7718D549C000D2EF59 /* SystemConfiguration.framework in Frameworks */,
 				37629A4018D533E600D2EF59 /* CoreGraphics.framework in Frameworks */,
 				37629A4218D533E600D2EF59 /* UIKit.framework in Frameworks */,
+				37629A7318D548B000D2EF59 /* Parse.framework in Frameworks */,
 				37629A3E18D533E600D2EF59 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +111,10 @@
 		37629A3C18D533E600D2EF59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37629A7818D549E300D2EF59 /* MobileCoreServices.framework */,
+				37629A7618D549C000D2EF59 /* SystemConfiguration.framework */,
+				37629A7418D5496F00D2EF59 /* CFNetwork.framework */,
+				37629A7218D548B000D2EF59 /* Parse.framework */,
 				37629A3D18D533E600D2EF59 /* Foundation.framework */,
 				37629A3F18D533E600D2EF59 /* CoreGraphics.framework */,
 				37629A4118D533E600D2EF59 /* UIKit.framework */,
@@ -200,6 +214,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Stephen Visser";
 				TargetAttributes = {
+					37629A3918D533E600D2EF59 = {
+						DevelopmentTeam = 5VX9E32K6L;
+					};
 					37629A5A18D533E600D2EF59 = {
 						TestTargetID = 37629A3918D533E600D2EF59;
 					};
@@ -377,6 +394,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: AndMobility.Chat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chat/Chat-Prefix.pch";
 				INFOPLIST_FILE = "Chat/Chat-Info.plist";
@@ -390,6 +412,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: AndMobility.Chat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chat/Chat-Prefix.pch";
 				INFOPLIST_FILE = "Chat/Chat-Info.plist";
